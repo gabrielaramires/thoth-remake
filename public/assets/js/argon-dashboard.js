@@ -2934,7 +2934,6 @@ window.darkMode = function (el) {
         el.classList.add('text-white');
       }
     }
-
     el.setAttribute("checked", "true");
   } else {
     body.classList.remove('dark-version');
