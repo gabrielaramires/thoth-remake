@@ -33,13 +33,13 @@
   ),
   'ladumor/laravel-pwa' => 
   array (
-    'providers' => 
-    array (
-      0 => '\\Ladumor\\LaravelPwa\\PWAServiceProvider',
-    ),
     'aliases' => 
     array (
       'LaravelPwa' => 'Ladumor\\LaravelPwa\\LaravelPwa',
+    ),
+    'providers' => 
+    array (
+      0 => '\\Ladumor\\LaravelPwa\\PWAServiceProvider',
     ),
   ),
   'laravel/sail' => 
@@ -101,13 +101,13 @@
   ),
   'macellan/laravel-zip' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Macellan\\Zip\\ZipServiceProvider',
-    ),
     'aliases' => 
     array (
       'Zip' => 'Macellan\\Zip\\ZipFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Macellan\\Zip\\ZipServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
