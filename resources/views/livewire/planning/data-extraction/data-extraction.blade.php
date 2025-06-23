@@ -3,6 +3,7 @@
     <div class="mt-0 mx-0">
         <div class="table-container">
             <table class="table table-custom-hover m-0">
+            <table id="data-extraction-questions-table" class="table table-custom-hover m-0">
                 <thead class="table-light">
                     <tr class="p-0 m-0">
                         <th class="p-1 rounded-l-sm" style="width: 20px"></th>
@@ -30,9 +31,12 @@
                             </td>
                             <td>{{ $question->id }}</td>
                             <td class="text-wrap">
+                            <td id="question-id-{{ $question->id }}">{{ $question->id }}</td>
+                            <td id="question-description-{{ $question->id }}" class="text-wrap">
                                 {{ $question->description }}
                             </td>
                             <td>
+                            <td id="question-type-{{ $question->id }}">
                                 {{ $question->question_type->type }}
                             </td>
                             <td>
@@ -60,7 +64,6 @@
                                 <td></td>
                                 <td></td>
                                 <td colspan="1" > <!-- Adicionando a classe text-end -->
-
                                     <div class="d-grid">
                                         @foreach ($question->options as $option)
                                             <div class="table-accordion-item d-flex justify-content-between ">

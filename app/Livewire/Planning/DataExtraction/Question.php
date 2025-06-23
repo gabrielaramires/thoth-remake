@@ -76,6 +76,7 @@ class Question extends Component
         $this->description = '';
         $this->type['value'] = '';
         $this->form['isEditing'] = false;
+        $this->currentQuestion = null;
     }
 
     /**
@@ -173,6 +174,7 @@ class Question extends Component
     #[On('data-extraction-table-edit-question')]
     public function edit(string $questionId)
     {
+        $this->resetFields();
         $this->currentQuestion = QuestionModel::where('id_project', $this->currentProject->id_project)
             ->where('id_de', $questionId)
             ->first();
